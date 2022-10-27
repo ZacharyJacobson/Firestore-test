@@ -1,8 +1,15 @@
 import {initializeApp} from "firebase/app";
 import {getFirestore, doc, setDoc} from "firebase/firestore";
 
+var json = require("./login.json");
+
 const firebaseApp = initializeApp({
-	//insert information here (do not display on github)
+	apiKey: json.apiKey,
+	authDomain: json.authDomain,
+	projectId: json.projectId,
+	storageBucket: json.storageBucket,
+	messagingSenderId: json.messagingSenderId,
+	appId: json.appId,
 });
 
 console.log("Initializing Firestore");
